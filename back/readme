@@ -1,0 +1,109 @@
+# LFMQ Backend
+
+This is the backend server application for the LFMQ project, built with Node.js and Express.
+
+## Prerequisites
+
+- Node.js (v16 or higher recommended)
+- npm (comes with Node.js)
+- MySQL Database
+
+## Tech Stack
+
+- Node.js
+- Express.js
+- MySQL with Sequelize ORM
+- JWT for authentication
+- Body-parser for request parsing
+- CORS for cross-origin resource sharing
+
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd back
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Database Configuration**
+   - Create a MySQL database
+   - Copy `config/db.example.js` to `config/db.js`
+   - Update database configuration in `config/db.js` with your credentials:
+     ```javascript
+     export default {
+       host: 'your_host',
+       user: 'your_username',
+       password: 'your_password',
+       database: 'your_database'
+     }
+     ```
+
+4. **Environment Setup**
+   - Make sure your MySQL server is running
+   - Configure any additional environment variables if needed
+
+## Available Scripts
+
+- **Development server**
+  ```bash
+  npm run dev
+  ```
+  Starts the development server
+
+- **Production server**
+  ```bash
+  npm start
+  ```
+  Starts the production server
+
+## Project Structure
+
+```
+back/
+├── app.js         # Main application entry point
+├── config/        # Configuration files
+├── models/        # Database models
+├── routes/        # API routes
+└── package.json   # Project dependencies
+```
+
+## API Endpoints
+
+The backend provides RESTful API endpoints at `/api`:
+- Detailed API documentation to be added
+
+## Database
+
+- The application uses MySQL as the primary database
+- Sequelize ORM is used for database operations
+- Database configuration should be kept secure and not committed to version control
+
+## Security Notes
+
+- Database credentials should never be committed to version control
+- JWT secrets should be properly configured
+- CORS is configured to accept requests from the frontend origin
+- Use appropriate environment variables for sensitive data
+
+## Development
+
+- The server runs on the default port (or as configured)
+- API endpoints are prefixed with `/api`
+- Make sure to handle database connections properly
+- Implement proper error handling and logging
+
+## Notes
+
+- Ensure proper error handling in production
+- Keep database credentials secure
+- Monitor server logs for issues
+- Implement proper backup strategies for the database
+
+## License
+
+[Your License Here]
